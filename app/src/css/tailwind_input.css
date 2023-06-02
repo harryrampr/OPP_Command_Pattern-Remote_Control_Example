@@ -8,10 +8,10 @@
     }
 
     h2 {
-        @apply text-xl;
+        @apply text-3xl;
         @apply font-medium;
-        @apply mt-2;
-        @apply mb-1;
+        @apply mt-3;
+        @apply mb-4;
     }
 
     h3 {
@@ -31,6 +31,39 @@
         @apply text-base;
         @apply mt-1;
         @apply ml-2;
+    }
+
+    .slot, .command {
+        @apply bg-slate-200;
+        @apply p-2;
+        @apply rounded-lg;
+        @apply text-center;
+        @apply text-lg;
+        @apply font-medium;
+        @apply text-blue-900/100;
+    }
+
+    .pressed, .action, .undo {
+        @apply flex-initial;
+        margin-right: .5rem;
+        @apply text-left;
+        @apply text-lg;
+        @apply font-medium;
+        @apply text-blue-900/100;
+        @apply whitespace-nowrap;
+    }
+
+    .action {
+        @apply mr-0;
+    }
+
+    .test {
+        @apply flex;
+    }
+
+    .action ~ .action::before {
+        content: ', ';
+        padding-left: .07rem;
     }
 }
 @tailwind components;

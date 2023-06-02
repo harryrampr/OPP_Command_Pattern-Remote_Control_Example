@@ -426,31 +426,74 @@ h1 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 500;
-  margin-bottom: 0.75rem;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 li {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.slot, .command {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
+  font-weight: 500;
+  color: rgb(30 58 138 / 1);
+}
+
+.pressed, .action, .undo {
+  flex: 0 1 auto;
+  margin-right: .5rem;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: rgb(30 58 138 / 1);
+  white-space: nowrap;
+}
+
+.action {
+  margin-right: 0px;
+}
+
+.test {
+  display: flex;
+}
+
+.action ~ .action::before {
+  content: ', ';
+  padding-left: .07rem;
 }
 
 *, ::before, ::after {
@@ -591,40 +634,30 @@ li {
   position: static;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .m-6 {
   margin: 1.5rem;
 }
 
-.contents {
-  display: contents;
+.mb-\[6rem\] {
+  margin-bottom: 6rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.grid {
+  display: grid;
 }
 
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
+.w-192 {
+  width: 48rem;
 }
 
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-.text-blue-700 {
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
-}
-
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-green-600 {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+.gap-6 {
+  gap: 1.5rem;
 }
