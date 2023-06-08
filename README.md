@@ -4,12 +4,6 @@ We are sharing some simple PHP code, showing the use of
 the [Command Pattern](https://en.wikipedia.org/wiki/Command_pattern). You will see how modern versions of PHP,
 supporting Classes, Interfaces and Enumerators, make it easy to implement the Command Pattern using this language.
 
-### About It
-
-The Command pattern is a behavioral design pattern in object-oriented programming that encapsulates a request as an
-object, thereby allowing users to parameterize clients with different requests, queue or log requests, and support
-undoable operations.
-
 You can find the PHP 8.1 code
 at [/app/src](https://github.com/harryrampr/OPP_Command_Pattern-Remote_Control_Example/tree/master/app/src, there is
 testing at [/tests](https://github.com/harryrampr/OPP_Command_Pattern-Remote_Control_Example/tree/master/app/tests)
@@ -18,6 +12,12 @@ at [/app/public](https://github.com/harryrampr/OPP_Command_Pattern-Remote_Contro
 directory.
 
 ### About the Pattern
+
+The Command pattern is a behavioral design pattern in object-oriented programming that encapsulates a request as an
+object, thereby allowing users to parameterize clients with different requests, queue or log requests, and support
+undoable operations.
+
+### History
 
 The Command Pattern is one of the design patterns introduced by the "Gang of Four" (Erich Gamma, Richard Helm, Ralph
 Johnson, and John Vlissides) in their influential
