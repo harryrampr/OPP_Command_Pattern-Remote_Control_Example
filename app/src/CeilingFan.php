@@ -3,17 +3,28 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * Represents a ceiling fan with different speed settings.
+ */
 class CeilingFan
 {
     private string $locationId;
     private Speed $speed;
 
+    /**
+     * CeilingFan constructor.
+     *
+     * @param string $locationId The identifier/location of the ceiling fan.
+     */
     public function __construct(string $locationId)
     {
         $this->locationId = $locationId;
         $this->speed = Speed::OFF;
     }
 
+    /**
+     * Turns off the ceiling fan.
+     */
     public function off(): void
     {
         $this->speed = Speed::OFF;
@@ -21,6 +32,9 @@ class CeilingFan
             $this->locationId, PHP_EOL);
     }
 
+    /**
+     * Sets the ceiling fan to low speed.
+     */
     public function low(): void
     {
         $this->speed = Speed::LOW;
@@ -28,6 +42,9 @@ class CeilingFan
             $this->locationId, PHP_EOL);
     }
 
+    /**
+     * Sets the ceiling fan to medium speed.
+     */
     public function medium(): void
     {
         $this->speed = Speed::MEDIUM;
@@ -35,6 +52,9 @@ class CeilingFan
             $this->locationId, PHP_EOL);
     }
 
+    /**
+     * Sets the ceiling fan to high speed.
+     */
     public function high(): void
     {
         $this->speed = Speed::HIGH;
@@ -42,6 +62,11 @@ class CeilingFan
             $this->locationId, PHP_EOL);
     }
 
+    /**
+     * Gets the current speed of the ceiling fan.
+     *
+     * @return Speed The current speed of the ceiling fan.
+     */
     public function getSpeed(): Speed
     {
         return $this->speed;

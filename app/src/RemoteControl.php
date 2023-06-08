@@ -3,18 +3,27 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * The RemoteControl class represents a remote control that can be used to execute commands.
+ */
 class RemoteControl
 {
+    /** @var int The number of slots on the remote control. */
     const SLOTS = 7;
 
-    /** @var Command[] $onCommands */
+    /** @var Command[] $onCommands The array of on commands. */
     private array $onCommands;
 
-    /** @var Command[] $offCommands */
+    /** @var Command[] $offCommands The array of off commands. */
     private array $offCommands;
 
+    /** @var Command $undoCommand The last executed command. */
     private Command $undoCommand;
 
+    /**
+     * RemoteControl constructor.
+     * Initializes the remote control with no commands assigned to the slots.
+     */
     public function __construct()
     {
         $noCommand = new NoCommand();
@@ -25,12 +34,24 @@ class RemoteControl
         $this->undoCommand = $noCommand;
     }
 
+    /**
+     * Sets the on and off commands for a specific slot on the remote control.
+     *
+     * @param int $slot           The slot number.
+     * @param Command $onCommand  The on command to be associated with the slot.
+     * @param Command $offCommand The off command to be associated with the slot.
+     */
     public function setCommand(int $slot, Command $onCommand, Command $offCommand): void
     {
         $this->onCommands[$slot] = $onCommand;
         $this->offCommands[$slot] = $offCommand;
     }
 
+    /**
+     * Executes the on command associated with a specific slot on the remote control.
+     *
+     * @param int $slot The slot number.
+     */
     public function onButtonWasPressed(int $slot): void
     {
         echo sprintf("</div>\n<div class=\"test\">\n<div class=\"pressed\">On Button #%d was pressed:</div>%s",
@@ -39,6 +60,11 @@ class RemoteControl
         $this->undoCommand = $this->onCommands[$slot];
     }
 
+    /**
+     * Executes the off command associated with a specific slot on the remote control.
+     *
+     * @param int $slot The slot number.
+     */
     public function offButtonWasPressed(int $slot): void
     {
         echo sprintf("</div>\n<div class=\"test\">\n<div class=\"pressed\">Off Button #%d was pressed:</div>%s",
@@ -47,12 +73,20 @@ class RemoteControl
         $this->undoCommand = $this->offCommands[$slot];
     }
 
+    /**
+     * Undoes the last executed command on the remote control.
+     */
     public function undoButtonWasPushed(): void
     {
         echo sprintf("</div>\n<div class=\"test\">\n<div class=\"undo\">Undo Button was pressed:</div>%s", PHP_EOL);
         $this->undoCommand->undo();
     }
 
+    /**
+     * Returns a string representation of the remote control.
+     *
+     * @return string The string representation of the remote control.
+     */
     public function __toString(): string
     {
         $str = "</div>\n<h2>Remote Control</h2>" . PHP_EOL;
