@@ -5,7 +5,7 @@ the [Command Pattern](https://en.wikipedia.org/wiki/Command_pattern). You will s
 supporting Classes, Interfaces and Enumerators, make it easy to implement the Command Pattern using this language.
 
 You can find the PHP 8.1 code
-at [/app/src](https://github.com/harryrampr/OPP_Command_Pattern-Remote_Control_Example/tree/master/app/src, there is
+at [/app/src](https://github.com/harryrampr/OPP_Command_Pattern-Remote_Control_Example/tree/master/app/src), there is
 testing at [/tests](https://github.com/harryrampr/OPP_Command_Pattern-Remote_Control_Example/tree/master/app/tests)
 directory. HTML output with Tailwind CSS can be found
 at [/app/public](https://github.com/harryrampr/OPP_Command_Pattern-Remote_Control_Example/tree/master/app/public)
