@@ -113,4 +113,3 @@ $remoteControl->offButtonWasPressed(6);
 echo $remoteControl;
 
 echo "</div>";
-echo "</div>";
